@@ -1,0 +1,62 @@
+version: '3'
+
+
+
+services:
+
+  sound_level_monitor:
+
+    image: sound_level_monitor:latest
+
+    build: C:/Users/user/IdeaProjects/SoundLevelMonitor/src/SoundLevelMonitor
+
+    environment:
+
+      LOW: 40
+
+      MEDIUM: 60
+
+      MAX: 80
+
+    networks:
+
+      - city-noisepollution-network
+
+    volumes:
+
+      - soundlevel:C:/Users/user/
+
+      - noisepollution:C:/Users/user/
+
+
+
+  sound_level_sensor:
+
+    image: sound_level_sensor:latest
+
+    build: C:/Users/user/IdeaProjects/SoundLevelSensor/src/SoundLevelSensor
+
+    networks:
+
+      - city-noisepollution-network
+
+    volumes:
+
+      - soundlevel:C:/Users/user/
+
+      - noisepollution:C:/Users/user/
+
+
+
+networks:
+
+  city-noisepollution-network:
+
+    driver: bridge
+
+volumes:
+
+  soundlevel:
+
+  noisepollution:
+

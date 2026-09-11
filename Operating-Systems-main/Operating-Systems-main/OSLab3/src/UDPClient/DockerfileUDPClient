@@ -1,0 +1,5 @@
+FROM openjdk:11
+WORKDIR C:/Users/user/IdeaProjects/OSLab3/src/UDPClient/
+COPY UDPClient.java .
+RUN javac UDPClient.java
+CMD ["java", "UDPClient"]

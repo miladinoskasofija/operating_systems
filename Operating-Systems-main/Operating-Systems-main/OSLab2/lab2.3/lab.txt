@@ -1,0 +1,33 @@
+5. docker compose up –d
+
+6. docker ps 
+
+    docker container list 
+
+    docker exec<soundlevel_id> ls /usr/share/nginx/html
+
+    docker exec<noisepollution_id> ls/app
+
+7. docker inspect<soundlevel_id>
+
+    docker inspect<noisepollution_id>
+
+8.  soundlevel na 80 i 8080, a noisepollution na 80 i 8081
+
+9. docker exec soundlevel_container env
+
+    docker exec noisepollution_container env
+
+10. docker compose stop 
+
+      docker compose up –d 
+
+      docker exec soundlevel_container env
+
+      docker compose stop 
+
+      docker compose up –d 
+
+      docker exec noisepollution_container env
+
+11.  docker-compose restart

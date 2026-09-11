@@ -1,0 +1,5 @@
+FROM openjdk:11
+WORKDIR C:/Users/user/IdeaProjects/OSLab3/src/TCPServer/
+COPY TCPServer.java .
+RUN javac TCPServer.java
+CMD ["java", "TCPServer"]

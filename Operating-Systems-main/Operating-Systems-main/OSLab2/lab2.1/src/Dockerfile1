@@ -1,0 +1,7 @@
+FROM eclipse-temurin
+
+WORKDIR /user/src/java
+COPY ./java .
+
+RUN javac ProductsManagement.java
+CMD ["java", "ProductsManagement"]
